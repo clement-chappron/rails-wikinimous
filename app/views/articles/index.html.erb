@@ -1,0 +1,13 @@
+<div class="col-lg-8 mx-auto">
+  <ul class="list-group">
+    <% @articles.each do |article| %>
+      <li class="list-group-item" style="border: none;">
+        <%= link_to article_path(article.id), class: "text-decoration-none " do %>
+          <h2><%= article.title %></h2>
+        <% end %>
+        <br>
+        <%= article.content %>
+      </li>
+    <% end %>
+  </ul>
+</div>
